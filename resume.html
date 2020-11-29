@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
 <title>SAHELI BASU</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body {font-family:"Times New Roman", Georgia, Serif}
-h1,h2,h3,h4,h5,h6 {font-family:"Playfair Display";letter-spacing:5px}
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 </style>
+<body class="w3-blue-grey">
 
-<body>
-<!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="home.html" class="w3-bar-item w3-button">Saheli Basu</a>
-<!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
-<a href="home.html" class="w3-bar-item w3-button">Home</a>
-<a href="resume.html" class="w3-bar-item w3-button">Resume</a>
-<a href="certificates.html" class="w3-bar-item w3-button">Certificates</a>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+  <a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">HOME</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a> 
+  <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a> 
+  <a href="certificates.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CERTIFICATES</a> 
+  <a href="faq.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">FAQ</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+</nav>
 
-</div>
-</div>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">SAHELI BASU</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
 
-<!-- Start Content -->
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  <!-- Start Content -->
 <div id="resume" class="w3-content">
-
-<div><div><div><div></div></div></div></div><p>   
-
-_________
-
-
-_________
-
-
-_________
-
-
-_________
-
-
-_________
-
 
 </p></div><div>_________</div><div class="_2zmWZ" style="background-color: rgb(244, 244, 244); margin-bottom: 1.2rem;">
   
@@ -77,5 +72,78 @@ Kolkata,West Bengal,India</div></div></div></div></div></div></div></div><div cl
     <p>Portfolio :<a href="https://github.com//MehaRima">Github</a></p></div></div></div></div></div>
 <!-- End Content -->
 </div>
+  
+  
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-blue-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>matter.</p>      
+      </div>
+    
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="Avatar.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">post1</span><br>
+            <span>matter</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="Avatar.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">post2</span><br>
+            <span>matter</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Learn</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">India</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Kolkata</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">COURSERA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">WEB DEVELOPMENT</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Projects</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Interests</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Employment</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Designing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-white w3-center w3-padding-24">Created by <a href="https://meharima.github.io/sahelibasu/" title="MehaRima" target="_blank" class="w3-hover-opacity">MehaRima</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
 </body>
-</html> 
+</html>
+
+
+
+
