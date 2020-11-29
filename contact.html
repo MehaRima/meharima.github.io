@@ -5,68 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {font-family:"Times New Roman", Georgia, Serif}
-h1,h2,h3,h4,h5,h6 {font-family:"Playfair Display";letter-spacing:5px}
-</style>
-
-<body>
-<!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="home.html" class="w3-bar-item w3-button">Saheli Basu</a>
-<!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
-<a href="home.html" class="w3-bar-item w3-button">Home</a>
-<a href="resume.html" class="w3-bar-item w3-button">Resume</a>
-<a href="certificates.html" class="w3-bar-item w3-button">Certificates</a>
-
-</div>
-</div>
 
 
-<!-- Start Content -->
-<div id="contact" class="w3-content">
-
-<!--  -->
-<h1 class="w3-wide">Saheli Basu</h1>
-<p>
-
-<!--  -->
- 
-   <p>_______________________________</p>
-<div class="_2zmWZ" style="background-color: rgb(244, 244, 244); margin-bottom: 1.2rem;">
-  <div><div class="_1XYsq" style="font-size: 4rem; line-height: 5.6rem; font-weight: bold; text-transform: uppercase;">MESSAGE</div></div></div>
 
 <!-- Contact -->
+<!DOCTYPE HTML>  
 
-      <p class="w3-opacity">GET IN TOUCH</p>
-      <form class="w3-container w3-card w3-padding-32 w3-white" action="/answer.php" target="_blank">
-        <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input" style="width:100%;" type="text" required name="Name">
-        </div>
-        <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input" style="width:100%;" type="text" required name="Email">
-        </div>
-        <div class="w3-section">
-          <label>Message</label>
-          <input class="w3-input" style="width:100%;" type="text" required name="Message">
-        </div>
-        <button type="submit" class="w3-button w3-teal w3-right">Send</button>
-      </form>
-    </div>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
   
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+    
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+  }
 
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>PHP Form Validation Example</h2>
+<p><span class="error">* required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="name">
+  <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  E-mail: <input type="text" name="email">
+  <span class="error">* <?php echo $emailErr;?></span>
+  <br><br>
+  Website: <input type="text" name="website">
+  <span class="error"><?php echo $websiteErr;?></span>
+  <br><br>
+  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
 
 </body>
 </html>
 
-<br>
-<p>Portfolio :<a href="https://github.com//MehaRima">Github</a></p>
 
 
-
-<!-- End Content -->
-</div>
-</body>
-</html>
