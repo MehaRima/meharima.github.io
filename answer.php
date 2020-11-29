@@ -2,7 +2,7 @@
 <body>
 
 Thanks For your Message!! 
-<?php echo $_POST["name"]; ?><br> <?php echo $_POST["email"]; ?>
+<a href="home.html">Want to go back</a>
 
 </body>
 </html>
